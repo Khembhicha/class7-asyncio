@@ -29,7 +29,7 @@ async def get_multiple_images(number):
 @app.get('/comic')
 async def hello():
     start = time.perf_counter()
-    urls = await get_multiple_images(100)
+    urls = await get_multiple_images(1000)
     end = time.perf_counter()
     return render_template('index.html', end=end, start=start, urls=urls)
 
